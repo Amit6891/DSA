@@ -66,6 +66,76 @@
             Console.WriteLine("Is Empty: " + list.IsEmpty());  // Output: Is Empty: False
 
             #endregion
+
+            #region HashSets
+            Console.WriteLine();
+            Console.WriteLine("A HashSet is a collection of unique elements. It doesn’t allow duplicate values.");
+            var hashSet = new HashSet<int>();
+            hashSet.Add(10);
+            hashSet.Add(10);
+            hashSet.Add(109);
+            hashSet.Add(100);
+            hashSet.Add(104);
+            hashSet.Add(10);
+            hashSet.Add(150);
+            hashSet.Add(150);
+            hashSet.Add(67);
+            hashSet.Add(10);
+            hashSet.Add(10);
+            hashSet.Add(10);
+            hashSet.Add(100);
+            hashSet.Add(104);
+            hashSet.Add(10);
+            hashSet.Add(150);
+            hashSet.Add(150);
+            hashSet.Add(67);
+
+            foreach (var item in hashSet)
+            {
+                Console.WriteLine(item);
+            }
+
+            hashSet.Remove(100);
+            Console.WriteLine("Removed 100");
+            foreach (var item in hashSet)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Contains 10?");
+            Console.WriteLine(hashSet.Contains(10));
+
+            #endregion
+
+            #region Dictionary
+            Console.WriteLine();
+            Console.WriteLine("A Dictionary is a collection of key/value pairs similar to a Hashtable, but it is strongly typed and generic.");
+
+            var dictionary = new Dictionary<int, string>();
+            dictionary.Add(3, "Three");
+            dictionary.Add(1, "One");
+            dictionary.Add(2, "Two");
+            dictionary.Add(31, "ThreeOne");
+            dictionary.Add(12, "Twelve");
+            dictionary.Add(100, "OneHundred");
+            Console.WriteLine();
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item.Key + " : " + item.Value);
+            }
+
+            dictionary.Remove(12);
+            Console.WriteLine("Removed 12");
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item.Key + " : " + item.Value);
+            }
+
+            Console.WriteLine("dictionary.ContainsKey(100)");
+            Console.WriteLine(dictionary.ContainsKey(100));
+            Console.WriteLine("dictionary[100])");
+            Console.WriteLine(dictionary[100]);
+            #endregion
         }
     }
 }
